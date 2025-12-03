@@ -1,7 +1,6 @@
 #include "point1.h"
 #include <cmath>
 
-// Конструктор по умолчанию
 Point::Point() : x_(0.0), y_(0.0) {}
 
 Point::Point(double x, double y) : x_(x), y_(y) {}
@@ -54,4 +53,5 @@ double Point::operator-(const Point& other) const {
 std::ostream& operator<<(std::ostream& os, const Point& point) {
     os << "Point(" << point.x_ << ", " << point.y_ << ")";
     return os;
+
 }
