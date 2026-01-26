@@ -7,7 +7,7 @@
 void setupConsole() {
     #ifdef _WIN32
 
-        system("chcp 65001 > nul"); 
+        system("chcp 65001 > nul");
     #else
         setlocale(LC_ALL, "ru_RU.UTF-8");
         std::locale::global(std::locale("ru_RU.UTF-8"));
@@ -47,7 +47,7 @@ int inputInt(const std::string& prompt) {
 }
 
 void task1() {
-    std::cout << "\n=== ЗАДАЧА 1: БАЗОВЫЙ КЛАСС Point ===" << std::endl;
+    std::cout << "\nЗАДАЧА 1 Point" << std::endl;
 
     std::cout << "\n1. Тестирование конструктора по умолчанию:" << std::endl;
     Point p1;
@@ -81,7 +81,7 @@ void task1() {
 }
 
 void task2() {
-    std::cout << "\n=== ЗАДАЧА 2: КЛАСС Point С ПЕРЕГРУЖЕННЫМИ ОПЕРАЦИЯМИ ===" << std::endl;
+    std::cout << "\nЗАДАЧА 2: Point С ПЕРЕГРУЖЕННЫМИ ОПЕРАЦИЯМИ" << std::endl;
 
     std::cout << "\n1. Создание тестовых точек:" << std::endl;
     double x1 = inputDouble("Введите координату x для точки 1: ");
@@ -95,7 +95,7 @@ void task2() {
     std::cout << "Создана точка 2: " << p2 << std::endl;
 
     std::cout << "\n2. Тестирование унарных операций:" << std::endl;
-
+    
     std::cout << "Префиксный --p1:" << std::endl;
     std::cout << "До: " << p1 << std::endl;
     Point p1_prefix = --p1;
@@ -134,8 +134,8 @@ void task2() {
 }
 
 void showMenu() {
-    std::cout << "\n=== ГЛАВНОЕ МЕНЮ ===" << std::endl;
-    std::cout << "1 - Задача 111111 (Базовый класс Point)" << std::endl;
+    std::cout << "\nГЛАВНОЕ МЕНЮ" << std::endl;
+    std::cout << "1 - Задача 1 (Базовый класс Point)" << std::endl;
     std::cout << "2 - Задача 2 (Класс Point с перегруженными операциями)" << std::endl;
     std::cout << "0 - Выход" << std::endl;
     std::cout << "Выберите задачу: ";
@@ -148,7 +148,11 @@ int main() {
     
     do {
         showMenu();
-        std::cin >> choice;
+        if (!(std::cin >> choice)) {
+            std::cin.clear();
+            std::cin.ignore(10000, '\n');
+            choice = -1;
+        }
         
         switch(choice) {
             case 1:
@@ -174,5 +178,4 @@ int main() {
     } while (choice != 0);
     
     return 0;
-
 }
