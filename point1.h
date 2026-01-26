@@ -1,5 +1,5 @@
-#ifndef POINT_H
-#define POINT_H
+#ifndef POINT1_H
+#define POINT1_H
 
 #include <iostream>
 
@@ -19,7 +19,7 @@ public:
 
     Point& operator--(); 
     Point operator--(int);
-    Point operator-();
+    Point operator-() const;
 
     operator int() const;         
     explicit operator double() const;
