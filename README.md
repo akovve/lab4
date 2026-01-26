@@ -12,7 +12,8 @@
   Перегруженный оператор << для удобного вывода
 
 Фото:
-<img width="610" height="768" alt="image" src="https://github.com/user-attachments/assets/3c03233d-7ddc-44b1-ab7a-c4c0688c8e1b" />
+<img width="403" height="453" alt="image" src="https://github.com/user-attachments/assets/ec118142-39fa-4215-8abb-5762d85e55d1" />
+
 
 
 Задача 2:
@@ -37,4 +38,5 @@ p - 5 - возвращает точку с уменьшенной координ
 p1 - p2 - возвращает расстояние между точками
 
 Фото:
-<img width="769" height="1067" alt="image" src="https://github.com/user-attachments/assets/b1d174e6-1927-4928-95b0-55f385330b35" />
+<img width="402" height="503" alt="image" src="https://github.com/user-attachments/assets/cb6843f5-8332-4000-85de-71516c400285" />
+
