@@ -30,7 +30,7 @@ Point Point::operator--(int) {
     return temp;
 }
 
-Point Point::operator-() {
+Point Point::operator-() const {
     return Point(y_, x_);
 }
 
@@ -53,5 +53,7 @@ double Point::operator-(const Point& other) const {
 std::ostream& operator<<(std::ostream& os, const Point& point) {
     os << "Point(" << point.x_ << ", " << point.y_ << ")";
     return os;
+}
 
 }
+
